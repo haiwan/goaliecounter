@@ -5,15 +5,21 @@
   </head>
   <body>
     <h1>Goalie Counter</h1>
-    <span>Total Shots:</span><span id="totalShotsCount"></span>
-    <span>Goals Allowed:</span><span id="goalsAllowedCount"></span>
+    <div>
+      <span>Total Shots:</span><span id="totalShotsCount"></span>
+      <span>Goals Allowed:</span><span id="goalsAllowedCount"></span>
+    </div>
     <span>Save Percentage:</span><span id="savePercentage"></span>
-    
-    <button type="button" onclick="onIncreaseSavedCountClick">Saved +</button>
-    <button type="button" onclick="onDecreaseSavedCountClick">Saved -</button>
-    <button type="button" onclick="onIncreaseMissedCountClick">Missed +</button>
-    <button type="button" onclick="onDecreaseMissedCountClick">Missed -</button>
-    <button type="button" onclick="reset">Reset</button>
+
+    <div>
+      <button type="button" onclick="onIncreaseSavedCountClick()">Saved +</button>
+      <button type="button" onclick="onDecreaseSavedCountClick()">Saved -</button>
+    </div>
+    <div>
+      <button type="button" onclick="onIncreaseMissedCountClick()">Missed +</button>
+      <button type="button" onclick="onDecreaseMissedCountClick()">Missed -</button>
+    </div>
+    <button type="button" onclick="reset()">Reset</button>
     
     <script>
       var savedCount = 0;
