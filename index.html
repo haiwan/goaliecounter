@@ -68,12 +68,24 @@
     </div>
 
     <div class="buttons-row">
-      <button type="button" onclick="onIncreaseSavedCountClick()" class="save-plus-button">Saved +</button>
-      <button type="button" onclick="onDecreaseSavedCountClick()" class="minus-button" id="save-minus-btn" disabled>Saved -</button>
+      <button type="button" onclick="onIncreaseSavedCountClick()" class="save-plus-button">
+        <span>+</span><br/>
+        <span>Saved</span><br/>
+      </button>
+      <button type="button" onclick="onDecreaseSavedCountClick()" class="minus-button" id="save-minus-btn" disabled>
+        <span>-</span><br/>
+        <span>Saved</span>
+      </button>
     </div>
     <div class="buttons-row">
-      <button type="button" onclick="onIncreaseMissedCountClick()" class="miss-plus-button">Missed +</button>
-      <button type="button" onclick="onDecreaseMissedCountClick()" class="minus-button" id="miss-minus-btn" disabled>Missed -</button>
+      <button type="button" onclick="onIncreaseMissedCountClick()" class="miss-plus-button">
+        <span>+</span><br/>
+        <span>Missed</span>
+      </button>
+      <button type="button" onclick="onDecreaseMissedCountClick()" class="minus-button" id="miss-minus-btn" disabled>
+        <span>-</span><br/>
+        <span>Missed</span>
+      </button>
     </div>
     <div class="reset-row">
       <button type="button" onclick="reset()" class="reset-button">Reset</button>
