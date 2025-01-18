@@ -2,24 +2,68 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .counter-text-block, .svp-text-block {
+        display: flex;
+        justify-content: space-between;
+        font-size: x-large;
+        padding: 2vmin;
+      }
+      .svp-text-block {
+        font-size: x-large;
+      }
+      .save-plus-button, .miss-plus-button {
+        width: 40vmin;
+        height: 40vmin;
+        border-radius: 50%;
+        border: none;
+        font-size: x-large;
+      }
+      .save-plus-button {
+        background-color: #04AA6D;
+      }
+      .miss-plus-button {
+        background-color: #f44336;
+      }
+      .minus-button {
+        width: 20vmin;
+        height: 20vmin;
+        border-radius: 50%;
+        font-size: medium;
+      }
+      .reset-button {
+        font-size: x-large;
+        border-radius: 5px;
+      }
+      .buttons-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        padding: 2vmin;
+      }
+    </style>
   </head>
   <body>
     <h1>Goalie Counter</h1>
-    <div>
-      <span>Total Shots:</span><span id="totalShotsCount"></span>
-      <span>Goals Allowed:</span><span id="goalsAllowedCount"></span>
+    <div class="counter-text-block">
+      <span><span>Total Shots:</span><span id="totalShotsCount"></span></span>
+      <span><span>Goals Allowed:</span><span id="goalsAllowedCount"></span></span>
     </div>
-    <span>Save Percentage:</span><span id="savePercentage"></span>
+    <div class="svp-text-block">
+      <span>Save Percentage:</span><span id="savePercentage"></span>
+    </div>
 
-    <div>
-      <button type="button" onclick="onIncreaseSavedCountClick()">Saved +</button>
-      <button type="button" onclick="onDecreaseSavedCountClick()">Saved -</button>
+    <div class="buttons-row">
+      <button type="button" onclick="onIncreaseSavedCountClick()" class="save-plus-button">Saved +</button>
+      <button type="button" onclick="onDecreaseSavedCountClick()" class="minus-button">Saved -</button>
     </div>
-    <div>
-      <button type="button" onclick="onIncreaseMissedCountClick()">Missed +</button>
-      <button type="button" onclick="onDecreaseMissedCountClick()">Missed -</button>
+    <div class="buttons-row">
+      <button type="button" onclick="onIncreaseMissedCountClick()" class="miss-plus-button">Missed +</button>
+      <button type="button" onclick="onDecreaseMissedCountClick()" class="minus-button">Missed -</button>
     </div>
-    <button type="button" onclick="reset()">Reset</button>
+    <div class="buttons-row">
+      <button type="button" onclick="reset()" class="reset">Reset</button>
+    </div>
     
     <script>
       var savedCount = 0;
