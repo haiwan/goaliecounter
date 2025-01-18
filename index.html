@@ -10,7 +10,8 @@
         padding: 2vmin;
       }
       .svp-text-block {
-        font-size: x-large;
+        font-size: xx-large;
+        justify-content: flex-start;
       }
       .save-plus-button, .miss-plus-button {
         width: 40vmin;
@@ -18,6 +19,7 @@
         border-radius: 50%;
         border: none;
         font-size: x-large;
+        color: white;
       }
       .save-plus-button {
         background-color: #04AA6D;
@@ -30,16 +32,21 @@
         height: 20vmin;
         border-radius: 50%;
         font-size: medium;
+        background-color: #e7e7e7;
       }
       .reset-button {
         font-size: x-large;
         border-radius: 5px;
+        background-color: #e7e7e7;
       }
-      .buttons-row {
+      .buttons-row, .reset-row {
         display: flex;
         justify-content: space-around;
         align-items: baseline;
         padding: 2vmin;
+      }
+      .reset-row {
+        padding-top: 20vmin;
       }
     </style>
   </head>
@@ -61,8 +68,8 @@
       <button type="button" onclick="onIncreaseMissedCountClick()" class="miss-plus-button">Missed +</button>
       <button type="button" onclick="onDecreaseMissedCountClick()" class="minus-button">Missed -</button>
     </div>
-    <div class="buttons-row">
-      <button type="button" onclick="reset()" class="reset">Reset</button>
+    <div class="reset-row">
+      <button type="button" onclick="reset()" class="reset-button">Reset</button>
     </div>
     
     <script>
@@ -119,7 +126,7 @@
         if (totalCount == 0) {
           return 0;
         } else {
-          return ((totalCount - missedCount)/totalCount).toFixed(2);
+          return ((totalCount - missedCount)/totalCount).toFixed(3);
         }
       }
     </script>
