@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Goalie Counter</h1>
+<span>Total Shots:</span><span id="totalShotsCount"></span>
+<span>Goals Allowed:</span><span id="goalsAllowedCount"></span>
+<span>Save Percentage:</span><span id="savePercentage"></span>
+
+<button type="button" onclick="onIncreaseSavedShotsClick">+ Saved Shots</button>
+<button type="button" onclick="onDecreaseSavedShotsClick">- Saved Shots</button>
+<button type="button" onclick="onIncreaseAllowedGoalsClick">+ Allowed Goal</button>
+<button type="button" onclick="onDecreaseAllowedGoalsClick">- Allowed Goal</button>
+
+  <script>
+    var totalShots = 0;
+    var totalGoalsAllowed = 0;
+    function increaseTotalShot() {
+      totalShots++;
+    }
+    function decreaseTotalShot() {
+      totalShots--;
+    }
+    function increaseGoalsAllowed() {
+      totalGoalsAllowed++;
+    }
+    function decreaseGoalsAllowed() {
+      totalGoalsAllowed++;
+    }
+    function onIncreaseSavedShotsClick() {
+      increaseTotalShot();
+      refreshResult()
+    }
+    function onDecreaseSavedShotsClick() {
+      decreaseTotalShot();
+      refreshResult()
+    }
+    function onIncreaseAllowedGoalsClick() {
+      increaseTotalShot();
+      increaseGoalsAllowed();
+      refreshResult();
+    }
+    function onDecreaseAllowedGoalsClick() {
+      decreaseTotalShot();
+      decreaseGoalsAllowed();
+      refreshResult();
+    }
+    function refreshResult() {
+      document.getElementById("totalShotsCount").innerText = totalShots;
+      document.getElementById("goalsAllowedCount").innerText = totalGoalsAllowed;
+      document.getElementById("savePercentage").innerText = ((totalShots - totalGoalsAllowed)/totalShots).toFixed(2);
+    }
+  </script>
+</body>
+</html> 
