@@ -6,12 +6,18 @@
       .counter-text-block, .svp-text-block {
         display: flex;
         justify-content: space-between;
-        font-size: x-large;
+        align-items: baseline;
+        font-size: large;
         padding: 2vmin;
       }
       .svp-text-block {
-        font-size: xx-large;
         justify-content: flex-start;
+      }
+      .value-txt,  .goals-allowed-txt{
+        font-size: xx-large;
+      }
+      .goals-allowed-txt {
+        color: #f44336;
       }
       .save-plus-button, .miss-plus-button {
         width: 40vmin;
@@ -54,11 +60,11 @@
   <body>
     <h1>Goalie Counter</h1>
     <div class="counter-text-block">
-      <span><span>Total Shots: </span><span id="totalShotsCount"></span></span>
-      <span><span>Goals Allowed: </span><span id="goalsAllowedCount"></span></span>
+      <span><span>Total Shots: </span><span id="totalShotsCount" class="value-txt"></span></span>
+      <span><span>Goals Allowed: </span><span id="goalsAllowedCount" class="goals-allowed-txt"></span></span>
     </div>
     <div class="svp-text-block">
-      <span>Save Percentage: </span><span id="savePercentage"></span>
+      <span>Save Percentage: </span><span id="savePercentage" class="value-txt"></span>
     </div>
 
     <div class="buttons-row">
