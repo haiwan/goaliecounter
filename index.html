@@ -24,7 +24,6 @@
         height: 40vmin;
         border-radius: 50%;
         border: none;
-        font-size: x-large;
         color: white;
       }
       .save-plus-button {
@@ -34,8 +33,8 @@
         background-color: #f44336;
       }
       .minus-button {
-        width: 26vmin;
-        height: 26vmin;
+        width: 25vmin;
+        height: 25vmin;
         border-radius: 50%;
         border: none;
         font-size: medium;
@@ -55,6 +54,12 @@
       .reset-row {
         padding-top: 20vmin;
       }
+      .symbol {
+        font-size: xxx-large;
+      }
+      .help-text {
+        font-size: small;
+      }
     </style>
   </head>
   <body>
@@ -69,22 +74,22 @@
 
     <div class="buttons-row">
       <button type="button" onclick="onIncreaseSavedCountClick()" class="save-plus-button">
-        <span>+</span><br/>
-        <span>Saved</span><br/>
+        <span class="symbol">+</span><br/>
+        <span class="help-text">Saved</span><br/>
       </button>
       <button type="button" onclick="onDecreaseSavedCountClick()" class="minus-button" id="save-minus-btn" disabled>
-        <span>-</span><br/>
-        <span>Saved</span>
+        <span class="symbol">-</span><br/>
+        <span class="help-text">Saved</span>
       </button>
     </div>
     <div class="buttons-row">
       <button type="button" onclick="onIncreaseMissedCountClick()" class="miss-plus-button">
-        <span>+</span><br/>
-        <span>Missed</span>
+        <span class="symbol">+</span><br/>
+        <span class="help-text">Missed</span>
       </button>
       <button type="button" onclick="onDecreaseMissedCountClick()" class="minus-button" id="miss-minus-btn" disabled>
-        <span>-</span><br/>
-        <span>Missed</span>
+        <span class="symbol">-</span><br/>
+        <span class="help-text">Missed</span>
       </button>
     </div>
     <div class="reset-row">
